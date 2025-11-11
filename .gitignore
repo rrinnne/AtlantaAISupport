@@ -1,0 +1,4 @@
+venv/
+sessions/
+data.py
+.idea/

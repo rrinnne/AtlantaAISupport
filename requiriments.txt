@@ -1,0 +1,5 @@
+telethon
+rapidfuzz
+opentele
+openai
+asyncio
