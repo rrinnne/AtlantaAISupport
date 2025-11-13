@@ -1,11 +1,10 @@
-from telethon import events
+from telethon import events, TelegramClient
 import asyncio
 import random
 from datetime import datetime, timedelta
 import json
 from rapidfuzz import process, fuzz
 from collections import deque
-from opentele.tl import TelegramClient
 from pathlib import Path
 from openai import OpenAI
 import data
@@ -118,7 +117,7 @@ async def main():
             return
 
         # лимит ответов ИИ (справочник + GPT)
-        if u["replies"] >= 2:
+        if u["replies"] >= 3:
             # 👇 Пробуем найти решение в базе (например, "спасибо")
             solution = find_solution(text)
 
